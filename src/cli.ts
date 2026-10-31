@@ -126,6 +126,29 @@ export async function scoreCmd(o: Record<string, string | boolean>) {
   if (failures.length) console.log(`judge failures: ${failures.length}, see output file`);
 }
 
+export function fixtureFailures(votes: Record<string, boolean>): string[] {
+  return Object.entries(votes).filter(([, pass]) => pass).map(([id]) => id);
+}
+
+export async function judgeCheckCmd(o: Record<string, string | boolean>) {
+  const tasks = new Map(loadTasks(String(o.tasks ?? "tasks")).map((t) => [t.id, t]));
+  const rows = readFileSync(String(o.fixtures ?? "judge-fixtures/fixtures.jsonl"), "utf8").split("\n").filter(Boolean)
+    .map((l) => JSON.parse(l) as { task: string; kind: string; answer: string });
+  capCheck(rows.length * 2, o);
+  const judges = [ep(o, "judge-a-", "GRCBENCH_JUDGE_A_KEY"), ep(o, "judge-b-", "GRCBENCH_JUDGE_B_KEY")];
+  let bad = 0;
+  for (const j of judges) {
+    for (const r of rows) {
+      const p = judgePrompt(tasks.get(r.task)!, r.answer);
+      const v = parseJudge(await chat(j, [{ role: "system", content: p.system }, { role: "user", content: p.user }]), p.ids);
+      const failed = v ? fixtureFailures(v) : ["invalid output"];
+      if (failed.length) { bad++; console.log(`${j.model} failed ${r.task} (${r.kind}): ${failed.join(",")}`); }
+    }
+  }
+  console.log(bad ? `judge check failed: ${bad}` : "judge check passed");
+  process.exit(bad ? 1 : 0);
+}
+
 async function main() {
   const [cmd, ...rest] = process.argv.slice(2);
   const o = args(rest);
@@ -139,12 +162,13 @@ async function main() {
   }
   if (cmd === "run") return runCmd(o);
   if (cmd === "score") return scoreCmd(o);
+  if (cmd === "judge-check") return judgeCheckCmd(o);
   if (cmd === "compare") {
     const read = (k: string) => (JSON.parse(readFileSync(must(o, k), "utf8")) as { results: TaskResult[] }).results;
     console.log(JSON.stringify(compare(read("current"), read("candidate")), null, 2));
     return;
   }
-  console.log("usage: cli.ts validate|run|score|compare (see README)");
+  console.log("usage: cli.ts validate|run|score|judge-check|compare (see README)");
   process.exit(2);
 }
 

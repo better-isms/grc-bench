@@ -35,7 +35,7 @@ node src/cli.ts score --answers answers.jsonl --out score.json --max-calls 120 \
 node src/cli.ts compare --current score-a.json --candidate score-b.json
 ```
 
-Pick judges from two different model families, neither of them the model under test. Your results are unofficial. There are no official scores yet, and results from different judges or versions are not comparable.
+Before scoring, run `judge-check` (see `judge-fixtures/README.md`). Pick judges from two different model families, neither of them the model under test. Your results are unofficial. There are no official scores yet, and results from different judges or versions are not comparable.
 
 ## Licence
 

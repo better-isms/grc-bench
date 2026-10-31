@@ -5,7 +5,7 @@ import type { AddressInfo } from "node:net";
 import {
   type Task, validateTask, validateSet, aggregate, summarize, compare, judgePrompt, parseJudge, runCheck,
 } from "../src/lib.ts";
-import { checkEndpoint, chat } from "../src/cli.ts";
+import { checkEndpoint, chat, fixtureFailures } from "../src/cli.ts";
 
 const base = (over: Partial<Task> = {}): Task => ({
   id: "gdpr-1", type: "fact", framework: "GDPR", provenance: "official_source", as_of: "2026-10-31",
@@ -104,4 +104,9 @@ test("chat works against a stub, and never echoes the key on error", async () =>
   assert.equal(await chat({ url, model: "m", key: "k", timeoutMs: 2000 }, []), "hello");
   await assert.rejects(chat({ url, model: "m", key: "secret-key", timeoutMs: 2000 }, []), (e: Error) => !e.message.includes("secret-key"));
   srv.close();
+});
+
+test("a judge passing any criterion on a fixture fails the check", () => {
+  assert.deepEqual(fixtureFailures({ a: false, b: true }), ["b"]);
+  assert.deepEqual(fixtureFailures({ a: false }), []);
 });
