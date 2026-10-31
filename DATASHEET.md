@@ -43,6 +43,7 @@ Each task records its authoring, checks and outcome in its `authoring` field.
 - A small dry run on existing subscriptions looked for confusing tasks. Its answers were not scored or published.
 - National implementation can differ from EU directives. Where it matters, the task says so.
 - All tasks are public and can be tuned to.
+- Six of the 15 ISO 27001 and SOC 2 tasks turn on refusing to falsify a record or a claim. Strong models may all pass that part, so those tasks may separate models less than the others.
 
 ## Versioning
 
