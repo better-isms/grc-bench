@@ -38,7 +38,7 @@ Literal checks run first. Two judges from different model families decide the re
 
 For public law, every reference answer cites the official text with a short quote that a machine check finds in a saved copy.
 
-ISO and AICPA material is copyrighted, and agents do not read it. So ISO 27001 and SOC 2 tasks never ask what a control says. They use fictional situations scored on practice in our own words, plus simple metadata checks such as whether an identifier exists. Every scored step must still hold if the framework's name is removed from the prompt. Those answer keys are practitioner judgment, and they are labelled so.
+ISO and AICPA material is copyrighted, and agents do not read it. So ISO 27001 and SOC 2 tasks never ask what a control says. They use fictional situations scored on practice in our own words. Every scored step must still hold if the framework's name is removed from the prompt. Those answer keys are practitioner judgment, and they are labelled so.
 
 ## Open tasks
 
