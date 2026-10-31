@@ -60,7 +60,7 @@
   "sha256": "5c63b2619a13b6de73e6f8c462ff9d0292f7c903a0d7a51680a6e5ece08246c9"
  },
  "https://csrc.nist.gov/pubs/sp/800/171/r2/upd1/final": {
-  "file": "SOURCE_NIST_SP800-171r2_CPRT.txt",
-  "sha256": "5c63b2619a13b6de73e6f8c462ff9d0292f7c903a0d7a51680a6e5ece08246c9"
+  "file": "SOURCE_NIST_SP800-171r2_publication_page.txt",
+  "sha256": "acb3424398fcd3edc2fdc0ece6acee052684474c89af956908aa737ba4fcb1c3"
  }
 }

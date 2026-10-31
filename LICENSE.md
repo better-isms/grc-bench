@@ -1,10 +1,10 @@
 # Licence
 
-## Code (`src/`, `test/`)
+## Code (`src/`, `test/`, `scripts/`)
 
 MIT License
 
-Copyright (c) 2026 Better ISMS
+Copyright (c) 2026 Better ISMS EURL
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -14,11 +14,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ## Source copies
 
-`sources/` holds plain-text copies of official public texts, kept so quote checks can be repeated. They are not Better ISMS work and are not covered by the licences below. The official publications are authoritative.
+`sources/` holds plain-text copies of official public texts, kept so quote checks can be repeated. They are not Better ISMS work and are not covered by the licences below. The official publications are authoritative. EU texts: © European Union, https://eur-lex.europa.eu; only the Official Journal is authentic. NIST and eCFR material is US Government work (17 U.S.C. 105).
 
-## Tasks and documentation
+## Tasks, fixtures and documentation
 
-Original text by Better ISMS is licensed under Creative Commons Attribution 4.0 International: https://creativecommons.org/licenses/by/4.0/
+To the extent Better ISMS EURL owns copyright, database rights or similar rights in the original task material, documentation, selection or arrangement, those rights are licensed under Creative Commons Attribution 4.0 International: https://creativecommons.org/licenses/by/4.0/. This does not grant rights in third-party material or restrict uses already permitted by law.
 
 This licence does not cover third-party names, marks, identifiers, titles, quotations or source material, which belong to their owners and are used for identification or short citation. See `provenance.json`.
 

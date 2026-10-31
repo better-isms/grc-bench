@@ -1,21 +1,23 @@
 # GRC Bench method (v0.1 preview)
 
+**Reference answers are provisional benchmark keys, not legal advice or operational instructions. Verify current authoritative sources before relying on them.**
+
 ## Why it exists
 
-To test AI on the work compliance practitioners do, in the open. We built it first to assess the models we consider for our own product. We publish it so the test can be inspected, criticised and reused by others.
+To test AI on the work compliance practitioners do, in the open. We are building it first to assess the models we consider for our own product. We publish it so the test can be inspected, criticised and reused by others.
 
 ## Conflict of interest
 
-Better ISMS sells ISMS Copilot, an AI product for this work. It will be an entry. We wrote this benchmark, so read it with that in mind.
+Better ISMS EURL publishes GRC Bench and sells ISMS Copilot, an AI product for this work. It will be an entry. We wrote this benchmark, so read it with that in mind.
 
 ## What we commit to
 
 1. Tasks, reference answers, scoring rules, judge prompts and scorer are public.
-2. Our product is tested only through its public API, like any other entry.
-3. We do not tune framework knowledge on benchmark tasks. This is a contributor rule, not a technical wall.
+2. In official rounds, our product will be tested only through its public API, like any other entry.
+3. We will not tune framework knowledge on benchmark tasks. This is an internal rule, written in `CONTRIBUTING.md`, not a technical wall.
 4. Every official round is pre-registered and publishes every entry, including ours when we lose.
-5. We also use GRC Bench privately to choose our own models. Those runs are not official scores and we never quote them publicly.
-6. Every correction goes in `ERRATA.md`, with a new version. Scores never compare across versions.
+5. We will also use GRC Bench privately to choose our own models. Those runs will not be official scores and we will not quote them publicly.
+6. Every correction goes in `ERRATA.md`, with a new version. Official results must not compare versions; the v0.1 kit does not enforce this.
 
 ## Tasks
 
@@ -30,15 +32,15 @@ Four types, weighted towards doing the work:
 
 Each task has binary criteria. A task score is the share passed.
 
-Critical failures, such as wrong law, a wrong deadline, an invented provision or unsafe advice, are reported as their own rate. They are never netted against quality. There is no single overall number.
+Critical failures, such as wrong law, a wrong deadline, an invented provision or unsafe advice, are reported as their own rate. They are never netted against quality. The scorer reports a mean criterion pass rate and a separate critical-failure rate.
 
-Two judges from different model families decide every criterion, and both must pass it. A literal check on a criterion can fail it but never pass it. Disagreements are reported. An invalid judge reply stops the run, and a missing answer scores zero. Judges read answers as untrusted data, and `judge-fixtures/` holds wrong answers and injection attempts each judge should fail. This reduces manipulation but does not remove it.
+The protocol requires the runner to pick two judges from different model families, and both must pass every criterion. The kit records their names but does not verify their families. A literal check on a criterion can fail it but never pass it. Disagreements are reported. An invalid judge reply stops the run, and a missing answer scores zero. Judges read answers as untrusted data, and `judge-fixtures/` holds wrong answers and injection attempts each judge should fail. This reduces manipulation but does not remove it.
 
-## How public law differs from ISO and SOC 2
+## How official texts differ from ISO and SOC 2
 
-For public law, every reference answer cites the official text with a short quote. A machine check finds each quote in a saved copy of the source it cites, and those copies are in `sources/`.
+For public law and NIST SP 800-171, every reference answer cites the official text with a short quote. A machine check finds each quote in the repository's copy of the source it cites, in `sources/`.
 
-ISO and AICPA material is copyrighted, and agents do not read it. So ISO 27001 and SOC 2 tasks never ask what a control says. They use fictional situations scored on practice in our own words. Every scored step must still hold if the framework's name is removed from the prompt. Those answer keys are practitioner judgment, and they are labelled so.
+ISO and AICPA material is copyrighted, and we gave it to no agent. Models may have met such text in training. So ISO 27001 and SOC 2 tasks never ask what a control says. They use fictional situations scored on practice in our own words. Every scored step must still hold if the framework's name is removed from the prompt. Those answer keys are model-written good-practice judgment, and they are labelled so.
 
 ## Open tasks
 

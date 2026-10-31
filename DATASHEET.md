@@ -26,11 +26,11 @@ The framework list and counts were chosen by us from what practitioners commonly
 
 ## How tasks were written
 
-All companies are invented. No customer data or customer wording was used.
+All companies are invented. Names were web-searched on 31 October 2026 with no match found, which is not a full register search. No customer data or customer wording was used.
 
-Public-law tasks were written by AI agents working from official texts, with no access to ISMS Copilot, its knowledge or past evaluation answers. That separation was set by instruction, not by a technical wall. A model from a second family then checked each key against the source. Quotes were confirmed by machine in saved copies.
+Public-law and NIST tasks were written by AI agents working from official texts, with no access to ISMS Copilot, its knowledge or past evaluation answers. That separation was set by instruction, not by a technical wall. A model from a second family then checked each key against the source. Quotes were confirmed by machine in saved copies.
 
-ISO 27001 and SOC 2 tasks were written with no standard open, and they contain no control identifiers, mappings or claims about what a standard requires. Every scored step must stand as good practice with the framework's name removed. A second model checked this. The keys are practitioner judgment, reviewed by the vendor by exception. Planned identifier and edition tasks for these two frameworks were left out, because we could not confirm the terms of a permitted free source.
+ISO/IEC 27001:2022 and SOC 2 tasks were written with no standard given to the agent, though models may have met such text in training. They contain no control identifiers, mappings or claims about what a standard requires. Every scored step must stand as good practice with the framework's name removed. A second model checked this. The keys are model-written good-practice judgment. Planned identifier and edition tasks for these two frameworks were left out, because we could not confirm the terms of a permitted free source.
 
 Each task records its authoring, checks and outcome in its `authoring` field.
 

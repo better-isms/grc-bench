@@ -4,7 +4,9 @@ An open benchmark for AI on governance, risk and compliance work, by ISMS Copilo
 
 **Preview v0.1. A vendor-authored candidate task suite and draft scoring method. It has not been calibrated on models, is not evidence of comparative performance, and should not be used to rank systems yet.**
 
-We sell an AI product for this work, and it will be an entry. Read [METHOD.md](METHOD.md) for what that means and what we commit to.
+**Reference answers are provisional benchmark keys, not legal advice or operational instructions. Verify current authoritative sources before relying on them.**
+
+Published by Better ISMS EURL, maker of ISMS Copilot. We sell an AI product for this work, and it will be an entry. Read [METHOD.md](METHOD.md) for what that means and what we commit to.
 
 ## What is here
 
@@ -16,7 +18,7 @@ We sell an AI product for this work, and it will be an entry. Read [METHOD.md](M
 
 ## Run it
 
-Needs Node 22.18 or later and an OpenAI-format chat completions endpoint. Use a benchmark-only key with a spend limit.
+Needs Node 22.18 or later and an OpenAI-compatible chat completions endpoint. Use a benchmark-only key with a spend limit.
 
 The kit contacts only the endpoints you configure:
 
@@ -44,4 +46,4 @@ Before scoring, run `judge-check` (see `judge-fixtures/README.md`). Pick judges 
 
 Code: MIT. Original task text and documentation by Better ISMS: CC BY 4.0. That licence does not cover third-party names, marks, identifiers, titles, quotes or source material. See [LICENSE.md](LICENSE.md) and `provenance.json`.
 
-Not affiliated with or endorsed by ISO, IEC, AICPA, NIST or any regulator or standards body.
+ISO and SOC 2 are marks of their owners, used only to name the standard and examination. Not affiliated with or endorsed by ISO, IEC, AICPA, NIST or any regulator or standards body.

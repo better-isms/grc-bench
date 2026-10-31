@@ -2,7 +2,7 @@
 // No runtime dependencies. No network access in this file.
 
 export const TASK_TYPES = ["applied", "seeded_review", "trap", "fact"] as const;
-export const PROVENANCE = ["official_source", "permitted_metadata", "clean_room"] as const;
+export const PROVENANCE = ["official_source", "permitted_metadata", "no_standard_open"] as const;
 export const FRAMEWORKS = [
   "GDPR", "NIS2", "DORA", "EU_AI_ACT", "CRA", "HIPAA", "NIST_800_171", "ISO_27001", "SOC_2",
 ] as const;
