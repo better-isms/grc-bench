@@ -16,7 +16,7 @@ export interface Criterion {
   id: string;
   text: string;
   critical: boolean;
-  check?: Check; // deterministic when present, judged otherwise
+  check?: Check; // optional literal check. It can fail a criterion, never pass one.
 }
 
 export interface Task {
@@ -125,18 +125,18 @@ export interface TaskResult {
   score: number; critical_failure: boolean; verdicts: Verdict[]; judge_disagreements: string[];
 }
 
-// A criterion needs both judges to pass. Disagreements are reported, never hidden.
+// Every criterion needs exactly two valid judge votes, both passes, and any
+// literal check passing. Anything else fails closed. Disagreements are reported.
 export function aggregate(task: Task, answer: string, judges: Record<string, boolean>[]): TaskResult {
+  if (judges.length !== 0 && judges.length !== 2) throw new Error(`${task.id}: expected two judges`);
   const verdicts: Verdict[] = [];
   const judge_disagreements: string[] = [];
   for (const c of task.criteria) {
-    if (c.check) {
-      verdicts.push({ id: c.id, pass: runCheck(c.check, answer), source: "check" });
-      continue;
-    }
+    const checkOk = !c.check || runCheck(c.check, answer);
     const votes = judges.map((j) => j[c.id] === true);
     if (new Set(votes).size > 1) judge_disagreements.push(c.id);
-    verdicts.push({ id: c.id, pass: votes.length > 0 && votes.every(Boolean), source: "judge" });
+    const pass = checkOk && votes.length === 2 && votes.every(Boolean);
+    verdicts.push({ id: c.id, pass, source: checkOk ? "judge" : "check" });
   }
   const passed = verdicts.filter((v) => v.pass).length;
   const failed = new Set(verdicts.filter((v) => !v.pass).map((v) => v.id));
@@ -146,6 +146,19 @@ export function aggregate(task: Task, answer: string, judges: Record<string, boo
     critical_failure: task.criteria.some((c) => c.critical && failed.has(c.id)),
     verdicts, judge_disagreements,
   };
+}
+
+// Answers must cover every task exactly once, so a partial file cannot look strong.
+export function checkAnswerSet(tasks: string[], answers: string[]): string[] {
+  const e: string[] = [];
+  const known = new Set(tasks), seen = new Set<string>();
+  for (const a of answers) {
+    if (!known.has(a)) e.push(`unknown task ${a}`);
+    if (seen.has(a)) e.push(`duplicate answer for ${a}`);
+    seen.add(a);
+  }
+  for (const t of tasks) if (!seen.has(t)) e.push(`missing answer for ${t}`);
+  return e;
 }
 
 export interface Summary {
@@ -194,7 +207,7 @@ export function compare(current: TaskResult[], candidate: TaskResult[]) {
 }
 
 export function judgePrompt(task: Task, answer: string): { system: string; user: string; ids: string[] } {
-  const judged = task.criteria.filter((c) => !c.check);
+  const judged = task.criteria;
   const nonce = Math.random().toString(36).slice(2, 10);
   const system = [
     "You are a strict grader. For each criterion decide pass or fail using only the reference answer and the criterion text.",
@@ -214,13 +227,14 @@ export function judgePrompt(task: Task, answer: string): { system: string; user:
 }
 
 export function parseJudge(text: string, ids: string[]): Record<string, boolean> | null {
-  const m = text.match(/\{[\s\S]*\}/);
-  if (!m) return null;
   try {
-    const o = JSON.parse(m[0]) as { verdicts?: { id: string; pass: boolean }[] };
-    if (!Array.isArray(o.verdicts)) return null;
+    const o = JSON.parse(text.trim()) as { verdicts?: { id: string; pass: boolean }[] };
+    if (!Array.isArray(o.verdicts) || o.verdicts.length !== ids.length) return null;
     const out: Record<string, boolean> = {};
-    for (const v of o.verdicts) if (ids.includes(v.id) && typeof v.pass === "boolean") out[v.id] = v.pass;
-    return ids.every((i) => i in out) ? out : null;
+    for (const v of o.verdicts) {
+      if (!ids.includes(v.id) || v.id in out || typeof v.pass !== "boolean") return null;
+      out[v.id] = v.pass;
+    }
+    return out;
   } catch { return null; }
 }

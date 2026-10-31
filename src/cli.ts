@@ -4,6 +4,7 @@ import { readFileSync, writeFileSync, appendFileSync, readdirSync } from "node:f
 import { join } from "node:path";
 import {
   type Task, type TaskResult, validateSet, coverage, aggregate, summarize, compare, judgePrompt, parseJudge,
+  checkAnswerSet,
 } from "./lib.ts";
 
 const MAX_RESPONSE_BYTES = 2_000_000;
@@ -23,6 +24,24 @@ export function checkEndpoint(url: string, allowLocal: boolean): string {
 
 export interface Endpoint { url: string; model: string; key: string; timeoutMs: number; }
 
+async function readBounded(res: Response): Promise<string> {
+  if (!res.body) throw new Error("empty response");
+  const reader = res.body.getReader();
+  const chunks: Uint8Array[] = [];
+  let size = 0;
+  for (;;) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    size += value.byteLength;
+    if (size > MAX_RESPONSE_BYTES) {
+      await reader.cancel();
+      throw new Error("response too large");
+    }
+    chunks.push(value);
+  }
+  return Buffer.concat(chunks).toString("utf8");
+}
+
 export async function chat(ep: Endpoint, messages: { role: string; content: string }[]): Promise<string> {
   const res = await fetch(`${ep.url}/chat/completions`, {
     method: "POST",
@@ -31,12 +50,15 @@ export async function chat(ep: Endpoint, messages: { role: string; content: stri
     headers: { "content-type": "application/json", authorization: `Bearer ${ep.key}` },
     body: JSON.stringify({ model: ep.model, messages, stream: false }),
   });
-  const body = await res.text();
-  if (body.length > MAX_RESPONSE_BYTES) throw new Error("response too large");
-  if (!res.ok) throw new Error(`endpoint returned ${res.status}`);
-  const j = JSON.parse(body) as { choices?: { message?: { content?: string } }[] };
-  const text = j.choices?.[0]?.message?.content;
+  if (!res.ok) { await res.body?.cancel(); throw new Error(`endpoint returned ${res.status}`); }
+  const body = await readBounded(res);
+  let text: unknown;
+  try {
+    const j = JSON.parse(body) as { choices?: { message?: { content?: string } }[] };
+    text = j.choices?.[0]?.message?.content;
+  } catch { throw new Error("endpoint returned invalid JSON"); }
   if (typeof text !== "string" || !text) throw new Error("empty answer");
+  if (text.includes(ep.key)) throw new Error("answer rejected: it contains the API key");
   return text;
 }
 
@@ -101,29 +123,28 @@ export async function scoreCmd(o: Record<string, string | boolean>) {
   const tasks = new Map(loadTasks(String(o.tasks ?? "tasks")).map((t) => [t.id, t]));
   const rows = readFileSync(must(o, "answers"), "utf8").split("\n").filter(Boolean)
     .map((l) => JSON.parse(l) as { task: string; answer: string; error: string });
+  const setErrors = checkAnswerSet([...tasks.keys()], rows.map((r) => r.task));
+  if (setErrors.length) throw new Error(`answers file rejected:\n${setErrors.join("\n")}`);
   capCheck(rows.length * 2, o);
   const judges = [ep(o, "judge-a-", "GRCBENCH_JUDGE_A_KEY"), ep(o, "judge-b-", "GRCBENCH_JUDGE_B_KEY")];
   const results: TaskResult[] = [];
-  const failures: string[] = [];
   for (const r of rows) {
-    const t = tasks.get(r.task);
-    if (!t) { failures.push(`${r.task}: unknown task`); continue; }
-    const p = judgePrompt(t, r.answer ?? "");
+    const t = tasks.get(r.task)!;
+    if (Buffer.byteLength(r.answer ?? "") > MAX_RESPONSE_BYTES) throw new Error(`${r.task}: answer too large`);
+    if (!r.answer) { results.push(aggregate(t, "", [])); continue; } // no answer scores zero
+    const p = judgePrompt(t, r.answer);
     const votes: Record<string, boolean>[] = [];
-    if (p.ids.length && r.answer) {
-      for (const j of judges) {
-        const text = await chat(j, [{ role: "system", content: p.system }, { role: "user", content: p.user }]);
-        const v = parseJudge(text, p.ids);
-        if (v) votes.push(v); else failures.push(`${r.task}: judge ${j.model} returned invalid output`);
-      }
+    for (const j of judges) {
+      const v = parseJudge(await chat(j, [{ role: "system", content: p.system }, { role: "user", content: p.user }]), p.ids);
+      if (!v) throw new Error(`${r.task}: judge ${j.model} returned invalid output, scoring stopped`);
+      votes.push(v);
     }
-    results.push(aggregate(t, r.answer ?? "", votes));
+    results.push(aggregate(t, r.answer, votes));
   }
   writeFileSync(must(o, "out"), JSON.stringify({
-    label: "unofficial run", judges: judges.map((j) => j.model), failures, summary: summarize(results), results,
+    label: "unofficial run", judges: judges.map((j) => j.model), summary: summarize(results), results,
   }, null, 2));
   console.log(JSON.stringify(summarize(results), null, 2));
-  if (failures.length) console.log(`judge failures: ${failures.length}, see output file`);
 }
 
 export function fixtureFailures(votes: Record<string, boolean>): string[] {

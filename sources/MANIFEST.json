@@ -1,0 +1,66 @@
+{
+ "https://eur-lex.europa.eu/eli/reg/2016/679/oj": {
+  "file": "GDPR_32016R0679.txt",
+  "sha256": "e9dcaef57f5feeae2be0fa17c9847dcbf12caaba599172673133be41ec66835f"
+ },
+ "https://eur-lex.europa.eu/eli/reg/2024/2847/oj": {
+  "file": "CRA_32024R2847.txt",
+  "sha256": "431e491a3dc7f12ba7bb029ca007af6d8804812e4f3c56151dd1dc7dfade5937"
+ },
+ "https://eur-lex.europa.eu/eli/dir/2022/2555/oj": {
+  "file": "NIS2_32022L2555.txt",
+  "sha256": "4a8cc217a6a7ad786c955f8885a6775a6813407bf654b50c110f523943b91c3a"
+ },
+ "https://eur-lex.europa.eu/eli/reg/2022/2554/oj": {
+  "file": "DORA_32022R2554.txt",
+  "sha256": "162d8634736364bda18c4df1a8a938357975bf970b22cc5f38ca41b97d36871f"
+ },
+ "https://eur-lex.europa.eu/eli/reg/2026/1744/oj": {
+  "file": "AIACT_OMNIBUS_32026R1744.txt",
+  "sha256": "50dfbb8b6d1826727b09bf5ad1b7fe88051c3c0eecb4f1b67ba778078953b3f8"
+ },
+ "https://eur-lex.europa.eu/eli/reg/2024/1689/oj": {
+  "file": "AIACT_32024R1689.txt",
+  "sha256": "cbc743b8028b3037f8acb2571daadfd817974c0e950f554b11ad243c93c52b5c"
+ },
+ "https://eur-lex.europa.eu/eli/reg_del/2024/1772/oj": {
+  "file": "DORA_RTS_CLASSIF_32024R1772.txt",
+  "sha256": "8bd46be542fe1c8214bb3afb5041f5f9c7356fe99d79232caaf37dbe5d1b725c"
+ },
+ "https://eur-lex.europa.eu/eli/reg_impl/2024/2690/oj": {
+  "file": "NIS2_IR_32024R2690.txt",
+  "sha256": "777be66d02e4482e3d45c9f7f94bd98147c861b647131b69b8ff272f179523f4"
+ },
+ "https://eur-lex.europa.eu/eli/reg_del/2025/301/oj": {
+  "file": "DORA_RTS_INCIDENT_32025R0301.txt",
+  "sha256": "04c311d54129ed1e82bbf809742924dfebe71da608217d54a00b4576224947b5"
+ },
+ "https://eur-lex.europa.eu/eli/reg_impl/2025/2392/oj": {
+  "file": "SOURCE_CRA_IR_2025_2392.txt",
+  "sha256": "6d13bb2197ec2e9492ce685cbfe7a36f2cc9cdf8dd0d00a8c348d996ef6acfd5"
+ },
+ "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-D": {
+  "file": "SOURCE_HIPAA_45CFR164_subpartD.txt",
+  "sha256": "de94b1abbdcbd2715889bf7636b8ccfdaf62a3688c81c62653de7fc9ad18e449"
+ },
+ "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C": {
+  "file": "HIPAA_45CFR164_subpartC.txt",
+  "sha256": "5ccacde45c64d8aaab806cc799c35747a7b321ff1d5a97e19f7eda3966ef02e6"
+ },
+ "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E": {
+  "file": "HIPAA_45CFR164_subpartE.txt",
+  "sha256": "78d56add5a9dcdc42711d3757b9055b00d99f2c480e241444efbb8a4552e2e95"
+ },
+ "https://csrc.nist.gov/extensions/nudp/services/json/nudp/framework/version/SP_800_171_3_0_0/export/json?element=all": {
+  "file": "SOURCE_NIST_SP800-171r3_CPRT.txt",
+  "sha256": "203f756914de87c19a4020fde2e40ddc91961a0e58f2253e4f8f26e02e4d49c5"
+ },
+ "https://csrc.nist.gov/extensions/nudp/services/json/nudp/framework/version/SP_800_171_2_0_0/export/json?element=all": {
+  "file": "SOURCE_NIST_SP800-171r2_CPRT.txt",
+  "sha256": "5c63b2619a13b6de73e6f8c462ff9d0292f7c903a0d7a51680a6e5ece08246c9"
+ },
+ "https://csrc.nist.gov/pubs/sp/800/171/r2/upd1/final": {
+  "file": "SOURCE_NIST_SP800-171r2_CPRT.txt",
+  "sha256": "5c63b2619a13b6de73e6f8c462ff9d0292f7c903a0d7a51680a6e5ece08246c9"
+ }
+}

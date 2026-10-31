@@ -12,6 +12,10 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+## Source copies
+
+`sources/` holds plain-text copies of official public texts, kept so quote checks can be repeated. They are not Better ISMS work and are not covered by the licences below. The official publications are authoritative.
+
 ## Tasks and documentation
 
 Original text by Better ISMS is licensed under Creative Commons Attribution 4.0 International: https://creativecommons.org/licenses/by/4.0/

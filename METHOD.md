@@ -32,11 +32,11 @@ Each task has binary criteria. A task score is the share passed.
 
 Critical failures, such as wrong law, a wrong deadline, an invented provision or unsafe advice, are reported as their own rate. They are never netted against quality. There is no single overall number.
 
-Literal checks run first. Two judges from different model families decide the rest, and both must pass a criterion. Disagreements are reported. Judges read answers as untrusted data, and `judge-fixtures/` holds wrong answers and injection attempts each judge should fail. This reduces manipulation but does not remove it.
+Two judges from different model families decide every criterion, and both must pass it. A literal check on a criterion can fail it but never pass it. Disagreements are reported. An invalid judge reply stops the run, and a missing answer scores zero. Judges read answers as untrusted data, and `judge-fixtures/` holds wrong answers and injection attempts each judge should fail. This reduces manipulation but does not remove it.
 
 ## How public law differs from ISO and SOC 2
 
-For public law, every reference answer cites the official text with a short quote that a machine check finds in a saved copy.
+For public law, every reference answer cites the official text with a short quote. A machine check finds each quote in a saved copy of the source it cites, and those copies are in `sources/`.
 
 ISO and AICPA material is copyrighted, and agents do not read it. So ISO 27001 and SOC 2 tasks never ask what a control says. They use fictional situations scored on practice in our own words. Every scored step must still hold if the framework's name is removed from the prompt. Those answer keys are practitioner judgment, and they are labelled so.
 

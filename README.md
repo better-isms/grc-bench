@@ -18,7 +18,10 @@ We sell an AI product for this work, and it will be an entry. Read [METHOD.md](M
 
 Needs Node 22.18 or later and an OpenAI-format chat completions endpoint. Use a benchmark-only key with a spend limit.
 
-Tasks and model answers are sent to the endpoints you configure. Nothing else leaves your machine, and the kit fetches nothing else.
+The kit contacts only the endpoints you configure:
+
+- Model endpoint: your API key, the model name, a short system prompt and each task with its documents.
+- Judge endpoints: their API keys, the model name, the task, reference answer, criteria and the model's answer.
 
 ```bash
 node src/cli.ts validate --tasks tasks

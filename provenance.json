@@ -1,0 +1,947 @@
+[
+ {
+  "id": "gdpr-applied-01",
+  "framework": "GDPR",
+  "provenance": "official_source",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Quotes are from the cited official source and excluded from that licence.",
+  "third_party_material": [
+   "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+  ],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "pending",
+   "verdict": "pending",
+   "disagreements": "",
+   "review": ""
+  }
+ },
+ {
+  "id": "gdpr-applied-02",
+  "framework": "GDPR",
+  "provenance": "official_source",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Quotes are from the cited official source and excluded from that licence.",
+  "third_party_material": [
+   "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+  ],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "pending",
+   "verdict": "pending",
+   "disagreements": "",
+   "review": ""
+  }
+ },
+ {
+  "id": "gdpr-applied-03",
+  "framework": "GDPR",
+  "provenance": "official_source",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Quotes are from the cited official source and excluded from that licence.",
+  "third_party_material": [
+   "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+  ],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "",
+   "review": ""
+  }
+ },
+ {
+  "id": "gdpr-applied-04",
+  "framework": "GDPR",
+  "provenance": "official_source",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Quotes are from the cited official source and excluded from that licence.",
+  "third_party_material": [
+   "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+  ],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "",
+   "review": ""
+  }
+ },
+ {
+  "id": "gdpr-seeded-01",
+  "framework": "GDPR",
+  "provenance": "official_source",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Quotes are from the cited official source and excluded from that licence.",
+  "third_party_material": [
+   "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+  ],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "",
+   "review": ""
+  }
+ },
+ {
+  "id": "gdpr-seeded-02",
+  "framework": "GDPR",
+  "provenance": "official_source",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Quotes are from the cited official source and excluded from that licence.",
+  "third_party_material": [
+   "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+  ],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "",
+   "review": ""
+  }
+ },
+ {
+  "id": "gdpr-trap-01",
+  "framework": "GDPR",
+  "provenance": "official_source",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Quotes are from the cited official source and excluded from that licence.",
+  "third_party_material": [
+   "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+  ],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "",
+   "review": ""
+  }
+ },
+ {
+  "id": "gdpr-trap-02",
+  "framework": "GDPR",
+  "provenance": "official_source",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Quotes are from the cited official source and excluded from that licence.",
+  "third_party_material": [
+   "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+  ],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "",
+   "review": ""
+  }
+ },
+ {
+  "id": "gdpr-fact-01",
+  "framework": "GDPR",
+  "provenance": "official_source",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Quotes are from the cited official source and excluded from that licence.",
+  "third_party_material": [
+   "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+  ],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "",
+   "review": ""
+  }
+ },
+ {
+  "id": "gdpr-fact-02",
+  "framework": "GDPR",
+  "provenance": "official_source",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Quotes are from the cited official source and excluded from that licence.",
+  "third_party_material": [
+   "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+  ],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "",
+   "review": ""
+  }
+ },
+ {
+  "id": "ai-applied-01",
+  "framework": "EU_AI_ACT",
+  "provenance": "official_source",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Quotes are from the cited official source and excluded from that licence.",
+  "third_party_material": [
+   "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+   "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+   "https://eur-lex.europa.eu/eli/reg/2026/1744/oj"
+  ],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "",
+   "review": ""
+  }
+ },
+ {
+  "id": "ai-applied-02",
+  "framework": "EU_AI_ACT",
+  "provenance": "official_source",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Quotes are from the cited official source and excluded from that licence.",
+  "third_party_material": [
+   "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+   "https://eur-lex.europa.eu/eli/reg/2026/1744/oj"
+  ],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "",
+   "review": ""
+  }
+ },
+ {
+  "id": "ai-applied-03",
+  "framework": "EU_AI_ACT",
+  "provenance": "official_source",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Quotes are from the cited official source and excluded from that licence.",
+  "third_party_material": [
+   "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+   "https://eur-lex.europa.eu/eli/reg/2026/1744/oj"
+  ],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "",
+   "review": ""
+  }
+ },
+ {
+  "id": "ai-seeded-01",
+  "framework": "EU_AI_ACT",
+  "provenance": "official_source",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Quotes are from the cited official source and excluded from that licence.",
+  "third_party_material": [
+   "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+   "https://eur-lex.europa.eu/eli/reg/2026/1744/oj"
+  ],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "",
+   "review": ""
+  }
+ },
+ {
+  "id": "ai-trap-01",
+  "framework": "EU_AI_ACT",
+  "provenance": "official_source",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Quotes are from the cited official source and excluded from that licence.",
+  "third_party_material": [
+   "https://eur-lex.europa.eu/eli/reg/2026/1744/oj"
+  ],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "",
+   "review": ""
+  }
+ },
+ {
+  "id": "ai-trap-02",
+  "framework": "EU_AI_ACT",
+  "provenance": "official_source",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Quotes are from the cited official source and excluded from that licence.",
+  "third_party_material": [
+   "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+   "https://eur-lex.europa.eu/eli/reg/2026/1744/oj"
+  ],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "",
+   "review": ""
+  }
+ },
+ {
+  "id": "ai-fact-01",
+  "framework": "EU_AI_ACT",
+  "provenance": "official_source",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Quotes are from the cited official source and excluded from that licence.",
+  "third_party_material": [
+   "https://eur-lex.europa.eu/eli/reg/2026/1744/oj"
+  ],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "",
+   "review": ""
+  }
+ },
+ {
+  "id": "cra-applied-01",
+  "framework": "CRA",
+  "provenance": "official_source",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Quotes are from the cited official source and excluded from that licence.",
+  "third_party_material": [
+   "https://eur-lex.europa.eu/eli/reg/2024/2847/oj"
+  ],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pending",
+   "disagreements": "",
+   "review": ""
+  }
+ },
+ {
+  "id": "cra-applied-02",
+  "framework": "CRA",
+  "provenance": "official_source",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Quotes are from the cited official source and excluded from that licence.",
+  "third_party_material": [
+   "https://eur-lex.europa.eu/eli/reg/2024/2847/oj",
+   "https://eur-lex.europa.eu/eli/reg_impl/2025/2392/oj"
+  ],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "",
+   "review": ""
+  }
+ },
+ {
+  "id": "cra-seeded-01",
+  "framework": "CRA",
+  "provenance": "official_source",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Quotes are from the cited official source and excluded from that licence.",
+  "third_party_material": [
+   "https://eur-lex.europa.eu/eli/reg/2024/2847/oj"
+  ],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "pending",
+   "verdict": "pending",
+   "disagreements": "",
+   "review": ""
+  }
+ },
+ {
+  "id": "cra-trap-01",
+  "framework": "CRA",
+  "provenance": "official_source",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Quotes are from the cited official source and excluded from that licence.",
+  "third_party_material": [
+   "https://eur-lex.europa.eu/eli/reg/2024/2847/oj"
+  ],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "",
+   "review": ""
+  }
+ },
+ {
+  "id": "cra-fact-01",
+  "framework": "CRA",
+  "provenance": "official_source",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Quotes are from the cited official source and excluded from that licence.",
+  "third_party_material": [
+   "https://eur-lex.europa.eu/eli/reg/2024/2847/oj"
+  ],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "",
+   "review": ""
+  }
+ },
+ {
+  "id": "iso27001-applied-01",
+  "framework": "ISO_27001",
+  "provenance": "clean_room",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Not affiliated with ISO, IEC or AICPA.",
+  "third_party_material": [],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "practitioner judgment, no official text check",
+   "review": ""
+  }
+ },
+ {
+  "id": "iso27001-applied-02",
+  "framework": "ISO_27001",
+  "provenance": "clean_room",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Not affiliated with ISO, IEC or AICPA.",
+  "third_party_material": [],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "practitioner judgment, no official text check",
+   "review": ""
+  }
+ },
+ {
+  "id": "iso27001-applied-03",
+  "framework": "ISO_27001",
+  "provenance": "clean_room",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Not affiliated with ISO, IEC or AICPA.",
+  "third_party_material": [],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "practitioner judgment, no official text check",
+   "review": ""
+  }
+ },
+ {
+  "id": "iso27001-applied-04",
+  "framework": "ISO_27001",
+  "provenance": "clean_room",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Not affiliated with ISO, IEC or AICPA.",
+  "third_party_material": [],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "practitioner judgment, no official text check",
+   "review": ""
+  }
+ },
+ {
+  "id": "iso27001-applied-05",
+  "framework": "ISO_27001",
+  "provenance": "clean_room",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Not affiliated with ISO, IEC or AICPA.",
+  "third_party_material": [],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "practitioner judgment, no official text check",
+   "review": ""
+  }
+ },
+ {
+  "id": "iso27001-applied-06",
+  "framework": "ISO_27001",
+  "provenance": "clean_room",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Not affiliated with ISO, IEC or AICPA.",
+  "third_party_material": [],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "practitioner judgment, no official text check",
+   "review": ""
+  }
+ },
+ {
+  "id": "iso27001-applied-07",
+  "framework": "ISO_27001",
+  "provenance": "clean_room",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Not affiliated with ISO, IEC or AICPA.",
+  "third_party_material": [],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "practitioner judgment, no official text check",
+   "review": ""
+  }
+ },
+ {
+  "id": "iso27001-applied-08",
+  "framework": "ISO_27001",
+  "provenance": "clean_room",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Not affiliated with ISO, IEC or AICPA.",
+  "third_party_material": [],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "practitioner judgment, no official text check",
+   "review": ""
+  }
+ },
+ {
+  "id": "iso27001-applied-09",
+  "framework": "ISO_27001",
+  "provenance": "clean_room",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Not affiliated with ISO, IEC or AICPA.",
+  "third_party_material": [],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "practitioner judgment, no official text check",
+   "review": ""
+  }
+ },
+ {
+  "id": "iso27001-applied-10",
+  "framework": "ISO_27001",
+  "provenance": "clean_room",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Not affiliated with ISO, IEC or AICPA.",
+  "third_party_material": [],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "practitioner judgment, no official text check",
+   "review": ""
+  }
+ },
+ {
+  "id": "soc2-applied-01",
+  "framework": "SOC_2",
+  "provenance": "clean_room",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Not affiliated with ISO, IEC or AICPA.",
+  "third_party_material": [],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "practitioner judgment, no official text check",
+   "review": ""
+  }
+ },
+ {
+  "id": "soc2-applied-02",
+  "framework": "SOC_2",
+  "provenance": "clean_room",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Not affiliated with ISO, IEC or AICPA.",
+  "third_party_material": [],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "practitioner judgment, no official text check",
+   "review": ""
+  }
+ },
+ {
+  "id": "soc2-applied-03",
+  "framework": "SOC_2",
+  "provenance": "clean_room",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Not affiliated with ISO, IEC or AICPA.",
+  "third_party_material": [],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "practitioner judgment, no official text check",
+   "review": ""
+  }
+ },
+ {
+  "id": "soc2-applied-04",
+  "framework": "SOC_2",
+  "provenance": "clean_room",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Not affiliated with ISO, IEC or AICPA.",
+  "third_party_material": [],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "practitioner judgment, no official text check",
+   "review": ""
+  }
+ },
+ {
+  "id": "soc2-applied-05",
+  "framework": "SOC_2",
+  "provenance": "clean_room",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Not affiliated with ISO, IEC or AICPA.",
+  "third_party_material": [],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "practitioner judgment, no official text check",
+   "review": ""
+  }
+ },
+ {
+  "id": "nis2-applied-01",
+  "framework": "NIS2",
+  "provenance": "official_source",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Quotes are from the cited official source and excluded from that licence.",
+  "third_party_material": [
+   "https://eur-lex.europa.eu/eli/dir/2022/2555/oj",
+   "https://eur-lex.europa.eu/eli/reg_impl/2024/2690/oj"
+  ],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pending",
+   "disagreements": "",
+   "review": ""
+  }
+ },
+ {
+  "id": "nis2-applied-02",
+  "framework": "NIS2",
+  "provenance": "official_source",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Quotes are from the cited official source and excluded from that licence.",
+  "third_party_material": [
+   "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
+  ],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "",
+   "review": ""
+  }
+ },
+ {
+  "id": "nis2-applied-03",
+  "framework": "NIS2",
+  "provenance": "official_source",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Quotes are from the cited official source and excluded from that licence.",
+  "third_party_material": [
+   "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
+  ],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "",
+   "review": ""
+  }
+ },
+ {
+  "id": "nis2-seeded-01",
+  "framework": "NIS2",
+  "provenance": "official_source",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Quotes are from the cited official source and excluded from that licence.",
+  "third_party_material": [
+   "https://eur-lex.europa.eu/eli/dir/2022/2555/oj",
+   "https://eur-lex.europa.eu/eli/reg_impl/2024/2690/oj"
+  ],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "",
+   "review": ""
+  }
+ },
+ {
+  "id": "nis2-trap-01",
+  "framework": "NIS2",
+  "provenance": "official_source",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Quotes are from the cited official source and excluded from that licence.",
+  "third_party_material": [
+   "https://eur-lex.europa.eu/eli/dir/2022/2555/oj",
+   "https://eur-lex.europa.eu/eli/reg_impl/2024/2690/oj"
+  ],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "",
+   "review": ""
+  }
+ },
+ {
+  "id": "nis2-fact-01",
+  "framework": "NIS2",
+  "provenance": "official_source",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Quotes are from the cited official source and excluded from that licence.",
+  "third_party_material": [
+   "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
+  ],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pending",
+   "disagreements": "",
+   "review": ""
+  }
+ },
+ {
+  "id": "nis2-fact-02",
+  "framework": "NIS2",
+  "provenance": "official_source",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Quotes are from the cited official source and excluded from that licence.",
+  "third_party_material": [
+   "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
+  ],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "",
+   "review": ""
+  }
+ },
+ {
+  "id": "dora-applied-01",
+  "framework": "DORA",
+  "provenance": "official_source",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Quotes are from the cited official source and excluded from that licence.",
+  "third_party_material": [
+   "https://eur-lex.europa.eu/eli/reg_del/2024/1772/oj"
+  ],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "",
+   "review": ""
+  }
+ },
+ {
+  "id": "dora-applied-02",
+  "framework": "DORA",
+  "provenance": "official_source",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Quotes are from the cited official source and excluded from that licence.",
+  "third_party_material": [
+   "https://eur-lex.europa.eu/eli/reg_del/2025/301/oj"
+  ],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "",
+   "review": ""
+  }
+ },
+ {
+  "id": "dora-applied-03",
+  "framework": "DORA",
+  "provenance": "official_source",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Quotes are from the cited official source and excluded from that licence.",
+  "third_party_material": [
+   "https://eur-lex.europa.eu/eli/reg/2022/2554/oj"
+  ],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "",
+   "review": ""
+  }
+ },
+ {
+  "id": "dora-seeded-01",
+  "framework": "DORA",
+  "provenance": "official_source",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Quotes are from the cited official source and excluded from that licence.",
+  "third_party_material": [
+   "https://eur-lex.europa.eu/eli/reg/2022/2554/oj"
+  ],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "pending",
+   "verdict": "pending",
+   "disagreements": "",
+   "review": ""
+  }
+ },
+ {
+  "id": "dora-trap-01",
+  "framework": "DORA",
+  "provenance": "official_source",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Quotes are from the cited official source and excluded from that licence.",
+  "third_party_material": [
+   "https://eur-lex.europa.eu/eli/reg/2022/2554/oj"
+  ],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "",
+   "review": ""
+  }
+ },
+ {
+  "id": "dora-fact-01",
+  "framework": "DORA",
+  "provenance": "official_source",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Quotes are from the cited official source and excluded from that licence.",
+  "third_party_material": [
+   "https://eur-lex.europa.eu/eli/reg_del/2024/1772/oj"
+  ],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "",
+   "review": ""
+  }
+ },
+ {
+  "id": "dora-fact-02",
+  "framework": "DORA",
+  "provenance": "official_source",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Quotes are from the cited official source and excluded from that licence.",
+  "third_party_material": [
+   "https://eur-lex.europa.eu/eli/reg/2022/2554/oj"
+  ],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "",
+   "review": ""
+  }
+ },
+ {
+  "id": "hipaa-applied-01",
+  "framework": "HIPAA",
+  "provenance": "official_source",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Quotes are from the cited official source and excluded from that licence.",
+  "third_party_material": [
+   "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-D"
+  ],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "pending",
+   "verdict": "pending",
+   "disagreements": "",
+   "review": ""
+  }
+ },
+ {
+  "id": "hipaa-applied-02",
+  "framework": "HIPAA",
+  "provenance": "official_source",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Quotes are from the cited official source and excluded from that licence.",
+  "third_party_material": [
+   "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C"
+  ],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "",
+   "review": ""
+  }
+ },
+ {
+  "id": "hipaa-seeded-01",
+  "framework": "HIPAA",
+  "provenance": "official_source",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Quotes are from the cited official source and excluded from that licence.",
+  "third_party_material": [
+   "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-D",
+   "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E"
+  ],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "",
+   "review": ""
+  }
+ },
+ {
+  "id": "hipaa-trap-01",
+  "framework": "HIPAA",
+  "provenance": "official_source",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Quotes are from the cited official source and excluded from that licence.",
+  "third_party_material": [
+   "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-D"
+  ],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "",
+   "review": ""
+  }
+ },
+ {
+  "id": "hipaa-fact-01",
+  "framework": "HIPAA",
+  "provenance": "official_source",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Quotes are from the cited official source and excluded from that licence.",
+  "third_party_material": [
+   "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C"
+  ],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "",
+   "review": ""
+  }
+ },
+ {
+  "id": "nist-applied-01",
+  "framework": "NIST_800_171",
+  "provenance": "official_source",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Quotes are from the cited official source and excluded from that licence.",
+  "third_party_material": [
+   "https://csrc.nist.gov/extensions/nudp/services/json/nudp/framework/version/SP_800_171_2_0_0/export/json?element=all",
+   "https://csrc.nist.gov/extensions/nudp/services/json/nudp/framework/version/SP_800_171_3_0_0/export/json?element=all"
+  ],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "",
+   "review": ""
+  }
+ },
+ {
+  "id": "nist-applied-02",
+  "framework": "NIST_800_171",
+  "provenance": "official_source",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Quotes are from the cited official source and excluded from that licence.",
+  "third_party_material": [
+   "https://csrc.nist.gov/extensions/nudp/services/json/nudp/framework/version/SP_800_171_2_0_0/export/json?element=all",
+   "https://csrc.nist.gov/extensions/nudp/services/json/nudp/framework/version/SP_800_171_3_0_0/export/json?element=all"
+  ],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "",
+   "review": ""
+  }
+ },
+ {
+  "id": "nist-trap-01",
+  "framework": "NIST_800_171",
+  "provenance": "official_source",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Quotes are from the cited official source and excluded from that licence.",
+  "third_party_material": [
+   "https://csrc.nist.gov/extensions/nudp/services/json/nudp/framework/version/SP_800_171_2_0_0/export/json?element=all",
+   "https://csrc.nist.gov/extensions/nudp/services/json/nudp/framework/version/SP_800_171_3_0_0/export/json?element=all"
+  ],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "",
+   "review": ""
+  }
+ },
+ {
+  "id": "nist-fact-01",
+  "framework": "NIST_800_171",
+  "provenance": "official_source",
+  "rights": "Task text original to Better ISMS, CC BY 4.0. Quotes are from the cited official source and excluded from that licence.",
+  "third_party_material": [
+   "https://csrc.nist.gov/extensions/nudp/services/json/nudp/framework/version/SP_800_171_3_0_0/export/json?element=all",
+   "https://csrc.nist.gov/pubs/sp/800/171/r2/upd1/final"
+  ],
+  "authoring": {
+   "author": "claude-opus-5-5 subagent",
+   "checker": "codex",
+   "verdict": "pass",
+   "disagreements": "",
+   "review": ""
+  }
+ }
+]
