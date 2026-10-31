@@ -1,0 +1,11 @@
+{
+  "name": "grc-bench",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.18" },
+  "scripts": {
+    "validate": "node src/cli.ts validate --tasks tasks",
+    "test": "node --test test/kit.test.ts"
+  }
+}
