@@ -1,0 +1,31 @@
+Codex final key and kit check, 2026-10-31
+
+tokens used
+61,052
+{"id":"nis2-applied-01","verdict":"pass","issue":"none","fix":"none"}
+{"id":"nis2-fact-01","verdict":"pass","issue":"none","fix":"none"}
+{"id":"dora-seeded-01","verdict":"pass","issue":"none","fix":"none"}
+{"id":"hipaa-applied-01","verdict":"pass","issue":"none","fix":"none"}
+{"id":"gdpr-applied-01","verdict":"pass","issue":"none","fix":"none"}
+{"id":"gdpr-applied-02","verdict":"pass","issue":"none","fix":"none"}
+{"id":"cra-applied-01","verdict":"pass","issue":"none","fix":"none"}
+{"id":"cra-seeded-01","verdict":"pass","issue":"none","fix":"none"}
+
+All eight requested kit findings are fixed:
+
+1. Bounded streaming read: confirmed.
+2. Key redaction in errors and answers: confirmed, including direct in-memory execution.
+3. Answer set exactly matches tasks: confirmed.
+4. Exactly two valid, strictly parsed judge responses or abort: confirmed.
+5. Wrong-task and injection fixtures exist: confirmed.
+6. Literal checks can only fail criteria: confirmed.
+7. Quotes are checked against their cited, hash-verified snapshots: 167 quotes, 0 problems.
+8. README describes endpoint egress: confirmed.
+
+New defect: `judge-fixtures/README.md` specifies `--max-calls 12`, but 12 fixtures across two judges require 24 calls. The documented mandatory preflight exits immediately with `pass --max-calls of at least 24 to confirm`. Change the example to `--max-calls 24`.
+
+Validation passed for all 60 tasks. The test suite reported 16/17 because this read-only sandbox forbids binding the local stub server (`EPERM`); equivalent in-memory checks for response bounds and key redaction passed.
+
+Verdict: FIX-FIRST
+
+SENTINEL-GB-r3
