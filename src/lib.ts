@@ -119,7 +119,7 @@ export function runCheck(c: Check, answer: string): boolean {
   return c.kind === "contains_any" ? hit : !hit;
 }
 
-export interface Verdict { id: string; pass: boolean; source: "check" | "judge"; }
+export interface Verdict { id: string; text: string; critical: boolean; pass: boolean; source: "check" | "judge"; }
 export interface TaskResult {
   task: string; framework: string; type: string;
   score: number; critical_failure: boolean; verdicts: Verdict[]; judge_disagreements: string[];
@@ -136,7 +136,7 @@ export function aggregate(task: Task, answer: string, judges: Record<string, boo
     const votes = judges.map((j) => j[c.id] === true);
     if (new Set(votes).size > 1) judge_disagreements.push(c.id);
     const pass = checkOk && votes.length === 2 && votes.every(Boolean);
-    verdicts.push({ id: c.id, pass, source: checkOk ? "judge" : "check" });
+    verdicts.push({ id: c.id, text: c.text, critical: c.critical, pass, source: checkOk ? "judge" : "check" });
   }
   const passed = verdicts.filter((v) => v.pass).length;
   const failed = new Set(verdicts.filter((v) => !v.pass).map((v) => v.id));

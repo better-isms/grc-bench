@@ -142,3 +142,20 @@ test("judge fixtures exist and cover both attack classes", () => {
   const kinds = new Set(rows.map((r: { kind: string }) => r.kind));
   assert.ok(kinds.has("wrong_task") && kinds.has("injection"));
 });
+
+test("questions.jsonl matches the tasks and carries no solutions", () => {
+  const q = readFileSync("questions.jsonl", "utf8").split("\n").filter(Boolean).map((l) => JSON.parse(l));
+  assert.equal(q.length, 60);
+  for (const row of q) assert.deepEqual(Object.keys(row).sort(), ["as_of", "documents", "id", "prompt"]);
+  for (const row of q) assert.match(row.id, /^q\d{2}$/);
+  const map = JSON.parse(readFileSync("tasks/question-map.json", "utf8"));
+  assert.equal(new Set(Object.values(map)).size, 60);
+  const text = readFileSync("questions.jsonl", "utf8");
+  for (const k of ["reference", "criteria", "acceptable_variants", "sources", "authoring"]) assert.ok(!text.includes(`"${k}"`));
+});
+
+test("verdicts carry criterion text and critical flag", () => {
+  const r = aggregate(base(), "48 hours", [yes, yes]);
+  assert.equal(r.verdicts[0].text, "States 72 hours");
+  assert.equal(r.verdicts[0].critical, true);
+});

@@ -5,7 +5,7 @@
   "type": "module",
   "engines": { "node": ">=22.18" },
   "scripts": {
-    "validate": "node src/cli.ts validate --tasks tasks",
+    "validate": "node src/cli.ts validate --tasks tasks && node scripts/export-questions.mjs --check",
     "test": "node --test test/kit.test.ts"
   }
 }

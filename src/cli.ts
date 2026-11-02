@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // grc-bench CLI: validate, run, score, compare. Node built-ins only.
-import { readFileSync, writeFileSync, appendFileSync, readdirSync } from "node:fs";
+import { readFileSync, writeFileSync, appendFileSync, readdirSync, existsSync } from "node:fs";
 import { join } from "node:path";
 import {
   type Task, type TaskResult, validateSet, coverage, aggregate, summarize, compare, judgePrompt, parseJudge,
@@ -123,6 +123,12 @@ export async function scoreCmd(o: Record<string, string | boolean>) {
   const tasks = new Map(loadTasks(String(o.tasks ?? "tasks")).map((t) => [t.id, t]));
   const rows = readFileSync(must(o, "answers"), "utf8").split("\n").filter(Boolean)
     .map((l) => JSON.parse(l) as { task: string; answer: string; error: string });
+  // Self-run answers use neutral question ids (q01...); map them back to task ids.
+  const mapPath = join(String(o.tasks ?? "tasks"), "question-map.json");
+  if (rows.some((r) => /^q\d+$/.test(r.task)) && existsSync(mapPath)) {
+    const qmap = JSON.parse(readFileSync(mapPath, "utf8")) as Record<string, string>;
+    for (const r of rows) if (qmap[r.task]) r.task = qmap[r.task];
+  }
   const setErrors = checkAnswerSet([...tasks.keys()], rows.map((r) => r.task));
   if (setErrors.length) throw new Error(`answers file rejected:\n${setErrors.join("\n")}`);
   capCheck(rows.length * 2, o);
