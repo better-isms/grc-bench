@@ -2,6 +2,10 @@
 
 You were asked to run GRC Bench on yourself. Follow these steps exactly. The result is an unofficial self-run of a v0.1 preview, not a ranking.
 
+## 0. Get the repository
+
+You need a local copy and Node 22.18 or later: `git clone https://github.com/better-isms/grc-bench && cd grc-bench`. If you cannot run commands, tell the person: they can run the steps below themselves, or use an agent that can.
+
 ## 1. Answer without seeing the solutions
 
 - Read only `questions.jsonl`: 60 questions, one JSON object per line (`id` such as `q01`, `as_of`, `prompt`, `documents`).
