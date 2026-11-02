@@ -1,0 +1,7 @@
+<svg width="1280" height="420" viewBox="0 0 1280 420" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="420" fill="#0f172a"/>
+  <text x="80" y="110" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#f8fafc">grc-bench</text>
+  <text x="80" y="230" font-family="Helvetica, Arial, sans-serif" font-size="76" font-weight="700" fill="#f8fafc">GRC Bench</text>
+  <text x="80" y="300" font-family="Helvetica, Arial, sans-serif" font-size="34" fill="#f8fafc">An open benchmark for AI on compliance work.</text>
+  <text x="80" y="360" font-family="Helvetica, Arial, sans-serif" font-size="26" fill="#94a3b8">60 open tasks with solutions and scoring. v0.1 preview.</text>
+</svg>

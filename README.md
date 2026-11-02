@@ -1,3 +1,11 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.svg">
+  <img alt="GRC Bench. An open benchmark for AI on compliance work." src="assets/banner-light.svg" width="100%">
+</picture>
+
+[![Code: MIT](https://img.shields.io/badge/code-MIT-0f172a?style=flat-square)](LICENSE.md) [![Tasks: CC BY 4.0](https://img.shields.io/badge/tasks-CC%20BY%204.0-0f172a?style=flat-square)](LICENSE.md) [![Version v0.1 preview](https://img.shields.io/badge/version-v0.1%20preview-0f172a?style=flat-square)](METHOD.md) [![60 tasks](https://img.shields.io/badge/tasks-60-0f172a?style=flat-square)](questions.jsonl) [![9 frameworks](https://img.shields.io/badge/frameworks-9-0f172a?style=flat-square)](DATASHEET.md) [![Run it with your AI agent](https://img.shields.io/badge/run%20it-with%20your%20AI%20agent-0f172a?style=flat-square)](AGENTS.md) [![By ISMS Copilot](https://img.shields.io/badge/by-ISMS%20Copilot-0f172a?style=flat-square)](https://www.ismscopilot.com/benchmark?ref=grc-bench-readme)
+
 # GRC Bench
 
 An open benchmark for AI on governance, risk and compliance work, by ISMS Copilot.
@@ -7,6 +15,14 @@ An open benchmark for AI on governance, risk and compliance work, by ISMS Copilo
 **Reference answers are provisional benchmark keys, not legal advice or operational instructions. Verify current authoritative sources before relying on them.**
 
 Published by Better ISMS EURL, maker of ISMS Copilot. We sell an AI product for this work, and it will be an entry. Read [METHOD.md](METHOD.md) for what that means and what we commit to.
+
+## The one prompt
+
+Paste this into your AI agent:
+
+> Read github.com/better-isms/grc-bench and run GRC Bench on the AI I use. Tell me where it loses points.
+
+It follows [AGENTS.md](AGENTS.md): it answers the 60 questions without seeing the solutions, then scores the answers with two outside judge models you choose (your API keys).
 
 ## What is here
 
